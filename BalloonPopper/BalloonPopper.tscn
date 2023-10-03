@@ -1,6 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6o2g2x5t1ups"]
+[gd_scene load_steps=7 format=3 uid="uid://b6o2g2x5t1ups"]
+
+[ext_resource type="Material" uid="uid://cus0f6mwa84r5" path="res://BalloonPopper/Balloon.tres" id="1_6rfxq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gjsnt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osa26"]
+albedo_color = Color(0.937255, 0.403922, 0.145098, 1)
+roughness = 0.19
+roughness_texture = SubResource("CanvasTexture_gjsnt")
 
 [sub_resource type="SphereMesh" id="SphereMesh_wtwbi"]
+material = SubResource("StandardMaterial3D_osa26")
+
+[sub_resource type="Skin" id="Skin_ovmfp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j0l4f"]
 
@@ -9,7 +21,9 @@
 [node name="Balloon" type="Area3D" parent="."]
 
 [node name="Model" type="MeshInstance3D" parent="Balloon"]
+material_override = ExtResource("1_6rfxq")
 mesh = SubResource("SphereMesh_wtwbi")
+skin = SubResource("Skin_ovmfp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Balloon"]
 shape = SubResource("SphereShape3D_j0l4f")
@@ -17,3 +31,8 @@ shape = SubResource("SphereShape3D_j0l4f")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.06231)
 current = true
+fov = 41.4
+near = 0.011
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.856033, 0.516922, 0, -0.516922, 0.856033, 0, 0.94043, 1.11516)
