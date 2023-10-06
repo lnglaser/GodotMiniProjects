@@ -1,6 +1,6 @@
 extends Area3D
 
-var clicks_to_pop : int = 3
+@export var clicks_to_pop : int = 3
 var size_increase : float = 0.2
 var score_to_give : int = 1
 

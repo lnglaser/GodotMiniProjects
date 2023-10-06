@@ -7,15 +7,19 @@
 script = ExtResource("1_vqpcx")
 
 [node name="Balloon" parent="." instance=ExtResource("2_oncpy")]
+clicks_to_pop = 5
 
 [node name="Balloon4" parent="." instance=ExtResource("2_oncpy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.258678, 1.91215, -3.51722)
+clicks_to_pop = 1
 
 [node name="Balloon2" parent="." instance=ExtResource("2_oncpy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+clicks_to_pop = 7
 
 [node name="Balloon3" parent="." instance=ExtResource("2_oncpy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23752, 1.07117, 0.463827)
+clicks_to_pop = 4
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.06231)
