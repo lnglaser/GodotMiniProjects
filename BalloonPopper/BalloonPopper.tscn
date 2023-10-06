@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6o2g2x5t1ups"]
+[gd_scene load_steps=9 format=3 uid="uid://b6o2g2x5t1ups"]
 
 [ext_resource type="Material" uid="uid://cus0f6mwa84r5" path="res://BalloonPopper/Balloon.tres" id="1_6rfxq"]
 [ext_resource type="Script" path="res://BalloonPopper/Balloon.gd" id="1_t7cle"]
+[ext_resource type="Script" path="res://BalloonPopper/BalloonManager.gd" id="1_vqpcx"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_gjsnt"]
 
@@ -18,6 +19,7 @@ material = SubResource("StandardMaterial3D_osa26")
 [sub_resource type="SphereShape3D" id="SphereShape3D_j0l4f"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_vqpcx")
 
 [node name="Balloon" type="Area3D" parent="."]
 script = ExtResource("1_t7cle")

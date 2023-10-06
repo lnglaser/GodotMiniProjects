@@ -11,4 +11,5 @@ func _on_input_event(camera, event, position, normal, shape_idx):
 		clicks_to_pop -= 1
 		
 		if clicks_to_pop == 0:
+			get_node("/root/Main").increase_score(score_to_give)
 			queue_free()
