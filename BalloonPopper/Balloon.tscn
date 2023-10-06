@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://bju26vt4oukqb"]
+
+[ext_resource type="Script" path="res://BalloonPopper/Balloon.gd" id="1_kfkin"]
+[ext_resource type="Material" uid="uid://cus0f6mwa84r5" path="res://BalloonPopper/Balloon.tres" id="2_51g44"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gjsnt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osa26"]
+albedo_color = Color(0.937255, 0.403922, 0.145098, 1)
+roughness = 0.19
+roughness_texture = SubResource("CanvasTexture_gjsnt")
+
+[sub_resource type="SphereMesh" id="SphereMesh_wtwbi"]
+material = SubResource("StandardMaterial3D_osa26")
+
+[sub_resource type="Skin" id="Skin_ovmfp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j0l4f"]
+
+[node name="Balloon" type="Area3D"]
+script = ExtResource("1_kfkin")
+
+[node name="Model" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_51g44")
+mesh = SubResource("SphereMesh_wtwbi")
+skin = SubResource("Skin_ovmfp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_j0l4f")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
