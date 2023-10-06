@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6o2g2x5t1ups"]
+[gd_scene load_steps=8 format=3 uid="uid://b6o2g2x5t1ups"]
 
 [ext_resource type="Material" uid="uid://cus0f6mwa84r5" path="res://BalloonPopper/Balloon.tres" id="1_6rfxq"]
+[ext_resource type="Script" path="res://BalloonPopper/Balloon.gd" id="1_t7cle"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_gjsnt"]
 
@@ -19,6 +20,7 @@ material = SubResource("StandardMaterial3D_osa26")
 [node name="Main" type="Node3D"]
 
 [node name="Balloon" type="Area3D" parent="."]
+script = ExtResource("1_t7cle")
 
 [node name="Model" type="MeshInstance3D" parent="Balloon"]
 material_override = ExtResource("1_6rfxq")
@@ -36,3 +38,5 @@ near = 0.011
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.856033, 0.516922, 0, -0.516922, 0.856033, 0, 0.94043, 1.11516)
+
+[connection signal="input_event" from="Balloon" to="Balloon" method="_on_input_event"]
