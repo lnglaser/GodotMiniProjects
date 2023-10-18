@@ -56,11 +56,10 @@ position = Vector2(78, 7)
 
 [node name="Crate10" parent="." instance=ExtResource("3_71u30")]
 position = Vector2(76, -55)
-gravity_scale = -7.7
 
 [node name="SouthWall" type="StaticBody2D" parent="."]
 position = Vector2(0, 81)
-scale = Vector2(2.14001, -0.210831)
+scale = Vector2(2.13765, -0.0500777)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SouthWall"]
 scale = Vector2(0.466978, 0.814379)
@@ -69,7 +68,7 @@ debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
 
 [node name="NorthWall" type="StaticBody2D" parent="."]
 position = Vector2(0, -81)
-scale = Vector2(2.14001, -0.210831)
+scale = Vector2(2.14001, -0.0606025)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NorthWall"]
 scale = Vector2(0.466978, 0.814379)
@@ -79,7 +78,7 @@ debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
 [node name="WestWall" type="StaticBody2D" parent="."]
 position = Vector2(-144, -3.8147e-06)
 rotation = 1.5708
-scale = Vector2(1.22392, -0.210831)
+scale = Vector2(1.19478, -0.0648683)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WestWall"]
 scale = Vector2(0.466978, 0.814379)
@@ -89,7 +88,7 @@ debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
 [node name="EastWall" type="StaticBody2D" parent="."]
 position = Vector2(144, 0)
 rotation = 1.5708
-scale = Vector2(1.22392, -0.210831)
+scale = Vector2(1.20721, -0.0525542)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EastWall"]
 scale = Vector2(0.466978, 0.814379)
