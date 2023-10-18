@@ -28,34 +28,35 @@ shape = SubResource("RectangleShape2D_ni5wp")
 zoom = Vector2(4, 4)
 
 [node name="Crate" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(-5, -7)
+position = Vector2(-115, -51)
 
 [node name="Crate2" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(21, -29)
+position = Vector2(-67, -39)
 
 [node name="Crate3" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(44, 0)
+position = Vector2(-24, -36)
 
 [node name="Crate4" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(71, -30)
+position = Vector2(-68, 22)
 
 [node name="Crate5" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(131, -46)
+position = Vector2(45, -22)
 
 [node name="Crate6" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(150, 1)
+position = Vector2(-103, 28)
 
 [node name="Crate7" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(81, 30)
+position = Vector2(38, 41)
 
 [node name="Crate8" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(146, 38)
+position = Vector2(79, 39)
 
 [node name="Crate9" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(201, 1)
+position = Vector2(78, 7)
 
 [node name="Crate10" parent="." instance=ExtResource("3_71u30")]
-position = Vector2(191, -46)
+position = Vector2(76, -55)
+gravity_scale = -7.7
 
 [node name="SouthWall" type="StaticBody2D" parent="."]
 position = Vector2(0, 81)

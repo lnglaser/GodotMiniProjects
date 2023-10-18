@@ -11,9 +11,7 @@ gravity_scale = 0.0
 linear_damp = 3.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(-111, 8)
 texture = ExtResource("1_inqke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-111, 8)
 shape = SubResource("RectangleShape2D_xxlqt")
