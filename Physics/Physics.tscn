@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1awpwc2s4ker"]
+[gd_scene load_steps=4 format=3 uid="uid://c1awpwc2s4ker"]
 
 [ext_resource type="Texture2D" uid="uid://0de5yfypgqxf" path="res://Physics/PhysicsCharacter.png" id="1_cbgsq"]
+[ext_resource type="Script" path="res://Physics/PhysicsPlayer.gd" id="1_iv2f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni5wp"]
 size = Vector2(18, 18)
@@ -8,6 +9,10 @@ size = Vector2(18, 18)
 [node name="Main" type="Node2D"]
 
 [node name="Player" type="RigidBody2D" parent="."]
+mass = 5.0
+gravity_scale = 0.0
+linear_damp = 2.0
+script = ExtResource("1_iv2f1")
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_cbgsq")
