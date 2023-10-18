@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://0de5yfypgqxf" path="res://Physics/PhysicsCharacter.png" id="1_cbgsq"]
 [ext_resource type="Script" path="res://Physics/PhysicsPlayer.gd" id="1_iv2f1"]
-[ext_resource type="Texture2D" uid="uid://6bddwpffaoi8" path="res://Physics/Crate.png" id="3_8espl"]
+[ext_resource type="PackedScene" uid="uid://2uihni7bytmb" path="res://Physics/Crate.tscn" id="3_71u30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni5wp"]
 size = Vector2(18, 18)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxlqt"]
-size = Vector2(18, 18)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmslg"]
+size = Vector2(289, 20)
 
 [node name="Main" type="Node2D"]
 
@@ -27,15 +27,70 @@ shape = SubResource("RectangleShape2D_ni5wp")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 
-[node name="Crate" type="RigidBody2D" parent="."]
-position = Vector2(12, 2)
-gravity_scale = 0.0
-linear_damp = 3.0
+[node name="Crate" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(-5, -7)
 
-[node name="Sprite" type="Sprite2D" parent="Crate"]
-position = Vector2(-111, 8)
-texture = ExtResource("3_8espl")
+[node name="Crate2" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(21, -29)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate"]
-position = Vector2(-111, 8)
-shape = SubResource("RectangleShape2D_xxlqt")
+[node name="Crate3" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(44, 0)
+
+[node name="Crate4" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(71, -30)
+
+[node name="Crate5" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(131, -46)
+
+[node name="Crate6" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(150, 1)
+
+[node name="Crate7" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(81, 30)
+
+[node name="Crate8" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(146, 38)
+
+[node name="Crate9" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(201, 1)
+
+[node name="Crate10" parent="." instance=ExtResource("3_71u30")]
+position = Vector2(191, -46)
+
+[node name="SouthWall" type="StaticBody2D" parent="."]
+position = Vector2(0, 81)
+scale = Vector2(2.14001, -0.210831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthWall"]
+scale = Vector2(0.466978, 0.814379)
+shape = SubResource("RectangleShape2D_bmslg")
+debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
+
+[node name="NorthWall" type="StaticBody2D" parent="."]
+position = Vector2(0, -81)
+scale = Vector2(2.14001, -0.210831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthWall"]
+scale = Vector2(0.466978, 0.814379)
+shape = SubResource("RectangleShape2D_bmslg")
+debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
+
+[node name="WestWall" type="StaticBody2D" parent="."]
+position = Vector2(-144, -3.8147e-06)
+rotation = 1.5708
+scale = Vector2(1.22392, -0.210831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WestWall"]
+scale = Vector2(0.466978, 0.814379)
+shape = SubResource("RectangleShape2D_bmslg")
+debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
+
+[node name="EastWall" type="StaticBody2D" parent="."]
+position = Vector2(144, 0)
+rotation = 1.5708
+scale = Vector2(1.22392, -0.210831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EastWall"]
+scale = Vector2(0.466978, 0.814379)
+shape = SubResource("RectangleShape2D_bmslg")
+debug_color = Color(0.984314, 0.121569, 0.0745098, 0.419608)
